@@ -5,43 +5,32 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.stone</groupId>
-  <artifactId>common</artifactId>
-    <packaging>pom</packaging>
+  <artifactId>common-export-web</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <name>common-export-web</name>
+
+  <parent>
+    <groupId>com.stone</groupId>
+    <artifactId>common</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <modules>
-        <module>common-utility</module>
-      <module>common-export</module>
-      <module>common-export-web</module>
-    </modules>
+  </parent>
 
-    <name>common-stone</name>
-
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
-    <spring.boot.version>2.2.5.RELEASE</spring.boot.version>
-  </properties>
-
-  <dependencyManagement>
-    <dependencies>
-      <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-web</artifactId>
-        <version>${spring.boot.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.projectlombok</groupId>
-        <artifactId>lombok</artifactId>
-        <version>1.16.22</version>
-      </dependency>
-      <dependency>
-        <groupId>junit</groupId>
-        <artifactId>junit</artifactId>
-        <version>4.12</version>
-      </dependency>
-    </dependencies>
-  </dependencyManagement>
+  <dependencies>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.stone</groupId>
+      <artifactId>common-export</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
 
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->

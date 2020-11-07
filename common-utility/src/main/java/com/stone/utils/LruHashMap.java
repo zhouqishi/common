@@ -1,4 +1,4 @@
-package com.stone.util;
+package com.stone.utils;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
